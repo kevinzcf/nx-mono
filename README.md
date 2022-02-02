@@ -121,6 +121,7 @@ nx g c todos --project=ui --export
 npm install --save-dev @nrwl/nest
 nx g @nrwl/nest:app api --frontendProject=memo
 
-
 nx dep-graph
 nx run-many --target=build --projects=memo,api
+nx lint memo --with-deps 
+nx affected:test --only-failed 
