@@ -1,0 +1,28 @@
+{
+  "root": "apps/memo-e2e",
+  "sourceRoot": "apps/memo-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/memo-e2e/cypress.json",
+        "devServerTarget": "memo:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "memo:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/memo-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["memo"]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "memo": "apps/memo",
+    "memo-e2e": "apps/memo-e2e"
+  }
+}
