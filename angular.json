@@ -1,7 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "api": "apps/api",
+    "data": "libs/data",
     "memo": "apps/memo",
-    "memo-e2e": "apps/memo-e2e"
+    "memo-e2e": "apps/memo-e2e",
+    "ui": "libs/ui"
   }
 }
