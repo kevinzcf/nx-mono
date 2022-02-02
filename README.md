@@ -103,3 +103,24 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
+
+
+## Command
+### Frontend
+npx create-nx-workspace@latest
+npx nx run memo:build
+ng run memo:serve
+nx e2e memo-e2e --watch
+
+nx g lib data
+
+nx g @nrwl/angular:lib ui
+nx g c todos --project=ui --export
+
+### Backend
+npm install --save-dev @nrwl/nest
+nx g @nrwl/nest:app api --frontendProject=memo
+
+
+nx dep-graph
+nx run-many --target=build --projects=memo,api

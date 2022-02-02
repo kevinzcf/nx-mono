@@ -73,6 +73,12 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
+      "dependsOn": [
+        {
+          "target": "lint",
+          "projects": "dependencies"
+        }
+      ], 
       "options": {
         "lintFilePatterns": ["apps/memo/src/**/*.ts", "apps/memo/src/**/*.html"]
       }
